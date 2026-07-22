@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -X POST https://api.clickup.com/api/v2/list/2kydjpqw-434/task -H 'Authorization: pk_228045184_B4CC9ZT2UWAJI0SHRPNK56LC128IMMYM' -H 'Content-Type: application/json' -d '{ *)"
+    ]
+  }
+}

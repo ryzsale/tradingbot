@@ -1,0 +1,7 @@
+# Local secrets
+.env
+*.env
+
+# Local artifacts
+DAILY-SUMMARY.md
+*.log

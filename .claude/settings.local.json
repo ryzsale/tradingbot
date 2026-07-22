@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:friscodawah.org)",
+      "Bash(claude mcp *)",
+      "mcp__whatsapp__list_chats",
+      "Bash(sqlite3 \"C:\\\\Users\\\\riyaz\\\\Downloads\\\\Terst project\\\\whatsapp-mcp\\\\whatsapp-bridge\\\\store\\\\messages.db\" \".tables\")",
+      "Bash(sqlite3 \"C:\\\\Users\\\\riyaz\\\\Downloads\\\\Terst project\\\\whatsapp-mcp\\\\whatsapp-bridge\\\\store\\\\messages.db\" \"SELECT COUNT\\(*\\) FROM chats; SELECT COUNT\\(*\\) FROM messages;\")",
+      "PowerShell(py C:\\\\Users\\\\riyaz\\\\Trading\\\\_inspect_db.py)",
+      "mcp__mcp-registry__search_mcp_registry",
+      "mcp__mcp-registry__suggest_connectors",
+      "PowerShell($headers = @{ \"API_KEY\" = \"9f4e3f09-5630-47aa-9831-0ac61d9c4595\"; \"Content-Type\" = \"application/json\" }; $body = '{\"businesses_to_match\":[{\"name\":\"Microsoft\",\"domain\":\"microsoft.com\"}]}'; try { $r = Invoke-RestMethod -Uri \"https://api.explorium.ai/v1/businesses/match\" -Method Post -Headers $headers -Body $body -ErrorAction Stop; $r | ConvertTo-Json -Depth 6 } catch { \"STATUS: $\\($_.Exception.Response.StatusCode.value__\\)\"; \"MSG: $\\($_.Exception.Message\\)\"; if \\($_.ErrorDetails.Message\\) { \"BODY: $\\($_.ErrorDetails.Message\\)\" } })",
+      "PowerShell(claude mcp list)",
+      "PowerShell(claude mcp add --transport http higgsfield https://mcp.higgsfield.ai/mcp -s user)",
+      "Bash(chmod 400 \"/c/Users/riyaz/OneDrive/iBuggie2024/AWS server Keys/BRTA-Server02-KeyPair 1.pem\")",
+      "Bash(ssh -i \"/c/Users/riyaz/OneDrive/iBuggie2024/AWS server Keys/BRTA-Server02-KeyPair 1.pem\" -o ConnectTimeout=10 -o StrictHostKeyChecking=accept-new ubuntu@34.194.18.233 \"whoami && hostname && uptime\")",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "Bash(claude --version)",
+      "Bash(npm view *)",
+      "Bash(npm install *)",
+      "Bash(npm approve-scripts *)",
+      "Bash(npm --global approve-scripts --allow-scripts-pending)",
+      "Bash(ssh -i '/c/Users/riyaz/OneDrive/iBuggie2024/AWS server Keys/BRTA-Server02-KeyPair 1.pem' -o ConnectTimeout=10 ubuntu@34.194.18.233 'systemctl is-active apache2; echo '\\\\''---HTACCESS---'\\\\''; cat /var/www/html/.htaccess; echo '\\\\''---CSS DIR---'\\\\''; find /var/www/html/css -maxdepth 2 -ls; echo '\\\\''---ASSETS CSS---'\\\\''; find /var/www/html/assets -iname '\\\\''*.css'\\\\'' -maxdepth 3 -ls')",
+      "Bash(curl -s -o /tmp/blue_home.html -w \"HTTP_STATUS:%{http_code}\\\\n\" https://blue.ibuggie.com/)",
+      "Read(//tmp/**)"
+    ]
+  }
+}

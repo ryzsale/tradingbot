@@ -1,0 +1,16 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /d c:\\\\Users\\\\riyaz\\\\Trading ; python - <<\"PY\"\nimport os, sys\nfrom pathlib import Path\npdf = Path\\('Opus 4\\.7 Trading Bot — Setup Guide\\.pdf'\\)\nprint\\(pdf\\.exists\\(\\), pdf\\.stat\\(\\)\\.st_size if pdf\\.exists\\(\\) else None\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^attrib \\+x scripts\\\\alpaca\\.sh scripts\\\\perplexity\\.sh scripts\\\\clickup\\.sh ; C:/Users/riyaz/AppData/Local/Python/pythoncore-3\\.14-64/python\\.exe -m py_compile \\.\\\\extract_pdf\\.py 2>\\$null; if \\(\\$LASTEXITCODE -eq 0\\) \\{ Write-Output 'Python script OK' \\} else \\{ Write-Output 'No Python validation needed' \\}$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^claude mcp list$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
