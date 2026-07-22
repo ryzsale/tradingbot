@@ -25,17 +25,17 @@ fi
 
 stamp="$(date '+%Y-%m-%d %H:%M %Z')"
 
-if [[ -z "${CLICKUP_API_KEY:-}" || -z "${CLICKUP_WORKSPACE_ID:-}" || -z "${CLICKUP_CHANNEL_ID:-}" ]]; then
+if [[ -z "${CLICKUP_API_KEY:-}" || -z "${CLICKUP_CHANNEL_ID:-}" ]]; then
   printf "\n---\n## %s (fallback — ClickUp not configured)\n%s\n" "$stamp" "$msg" >> "$FALLBACK"
   echo "[clickup fallback] appended to DAILY-SUMMARY.md"
   echo "$msg"
   exit 0
 fi
 
-payload="$(python -c 'import json, sys; print(json.dumps({"type": "message", "content": sys.argv[1], "content_format": "text/md"}))' "$msg")"
+payload="$(python -c 'import json, sys; print(json.dumps({"name": sys.argv[1]}))' "$msg")"
 
 curl -fsS -X POST \
-  "https://api.clickup.com/api/v3/workspaces/$CLICKUP_WORKSPACE_ID/chat/channels/$CLICKUP_CHANNEL_ID/messages" \
+  "https://api.clickup.com/api/v2/list/$CLICKUP_CHANNEL_ID/task" \
   -H "Authorization: $CLICKUP_API_KEY" \
   -H "Content-Type: application/json" \
   -d "$payload"
