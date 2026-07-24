@@ -2,6 +2,6 @@
 .env
 *.env
 
-# Local artifacts
-DAILY-SUMMARY.md
+# Local artifacts (root level only)
+/DAILY-SUMMARY.md
 *.log
