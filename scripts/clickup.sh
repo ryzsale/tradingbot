@@ -32,22 +32,15 @@ if [[ -z "${CLICKUP_API_KEY:-}" || -z "${CLICKUP_LIST_ID:-}" ]]; then
   exit 0
 fi
 
-# Extract first line as title, rest as description
+# Extract first line as title
 title=$(echo "$msg" | head -1)
-description=$(echo "$msg" | tail -n +2)
 
-# Build JSON payload with title and description
-if [[ -n "$description" ]]; then
-  payload=$(cat <<EOF
-{
-  "name": "$title",
-  "description": "$description"
-}
-EOF
-  )
-else
-  payload="{\"name\": \"$title\"}"
-fi
+# Escape JSON special characters: quote, backslash, newline, carriage return, tab
+escaped_title="${title//\\/\\\\}"
+escaped_title="${escaped_title//\"/\\\"}"
+
+# Build simple JSON payload with title only (newlines not supported in task names)
+payload="{\"name\": \"$escaped_title\"}"
 
 curl -fsS -X POST \
   "https://api.clickup.com/api/v2/list/$CLICKUP_LIST_ID/task" \
