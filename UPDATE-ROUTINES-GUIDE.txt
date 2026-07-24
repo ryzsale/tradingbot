@@ -54,8 +54,27 @@ STEP 4 — Write dated entry to memory/RESEARCH-LOG.md:
 - Risk factors
 - Decision: TRADE or HOLD (default HOLD)
 
-STEP 5 — Send ClickUp notification:
-bash scripts/clickup.sh "Pre-Market Report — MMM DD, YYYY | Account: $X | VIX: X | Decision: TRADE/HOLD"
+STEP 5 — Send ClickUp notification (multi-section, title + description):
+bash scripts/clickup.sh "Pre-Market Report — MMM DD, YYYY
+
+**Account Status**
+Equity: $X | Cash: $X (X%) | BP: $X | DT: N/3
+
+**Market Conditions**
+VIX: X | S&P Futures: X | Sector Momentum: X
+
+**Catalysts & Events**
+- Fed speakers, earnings, economic data (specific list)
+
+**Trade Setup**
+- TICKER (catalyst: ..., entry: $X, stop: $X, target: $X, R:R X:1)
+- Alternative: No trade ideas identified yet
+
+**Risk Outlook**
+Market volatility / sector rotation / economic uncertainty
+
+**Decision: TRADE / HOLD**
+[One-line rationale]"
 
 STEP 6 — COMMIT AND PUSH:
 git add memory/RESEARCH-LOG.md
@@ -109,8 +128,21 @@ If rejected, use fixed stop 10% below entry, or queue as "PDT-blocked".
 STEP 6 — Append trades to memory/TRADE-LOG.md:
 Date, ticker, side, shares, entry price, stop level, thesis, target, R:R.
 
-STEP 7 — Notification (only if trade placed):
-bash scripts/clickup.sh "Market-Open Execution — MMM DD, YYYY | TICKER N@$X | Stop $X"
+STEP 7 — Notification (only if trade placed, multi-section):
+bash scripts/clickup.sh "Market-Open Execution — MMM DD, YYYY
+
+**Trades Executed**
+✓ TICKER | N shares @ $X entry | Stop $X | Target $X (R:R X:1)
+(or: ○ No trades — market conditions unfavorable)
+
+**Portfolio Status**
+Equity: $X | Cash: $X (X%) | Positions: N | DT: N/3
+
+**Execution Details**
+Entry Time: HH:MM ET | Fill: Confirmed | Stop: GTC/PDT-blocked
+
+**Rationale**
+[Catalyst / setup from RESEARCH-LOG]"
 
 STEP 8 — COMMIT AND PUSH (if trades executed):
 git add memory/TRADE-LOG.md
@@ -160,8 +192,18 @@ If thesis broke, cut position. Document reasoning.
 
 STEP 6 — Optional intraday research if something moving sharply.
 
-STEP 7 — Notification (if action taken):
-bash scripts/clickup.sh "Midday Scan — MMM DD, YYYY | Actions: [Cut X at -7% | Trail tightened] | OK"
+STEP 7 — Notification (if action taken, multi-section):
+bash scripts/clickup.sh "Midday Scan — MMM DD, YYYY
+
+**Position Updates**
+✓ TICKER | Action: [Cut -7% | Trail tightened to X%] | P&L: ±$X
+(or: ○ No changes — all theses holding, no losers)
+
+**Active Portfolio**
+TICKER | shares @ $X | Current $Y | Unrealized ±$X | Stop $Z
+
+**Market Conditions & Actions**
+[Intraday thesis check results / stop management / market catalysts]"
 
 STEP 8 — COMMIT AND PUSH (if memory changed):
 git add memory/TRADE-LOG.md memory/RESEARCH-LOG.md
@@ -207,8 +249,20 @@ STEP 4 — Append EOD snapshot to memory/TRADE-LOG.md:
 ### MMM DD — EOD Snapshot (Day N, Weekday)
 Portfolio: $X | Cash: $X (X%) | Day P&L: ±$X (±X%) | Phase P&L: ±$X (±X%) | Open: [TICKER $X | ...]
 
-STEP 5 — Send ClickUp notification (ALWAYS, even no-trade days):
-bash scripts/clickup.sh "EOD Report — MMM DD, YYYY (Day N) | Equity: $X (±X% day) | Positions: N | Trades: M/3 week"
+STEP 5 — Send ClickUp notification (ALWAYS, even no-trade days, multi-section):
+bash scripts/clickup.sh "EOD Report — MMM DD, YYYY (Day N)
+
+**Portfolio Performance**
+Equity: $X | Cash: $X (X%) | Day P&L: ±$X (±X%) | Phase P&L: ±$X (±X%)
+
+**Active Positions**
+TICKER ±X% (entry $X, stop $X.XX) | ... | Trades today: [list or none]
+
+**Weekly Tracking**
+Trades: N/3 this week | Open positions: N | Avg R:R: X:1
+
+**Tomorrow's Focus**
+[One-line market plan or sector focus]"
 
 STEP 6 — COMMIT AND PUSH:
 git add memory/TRADE-LOG.md
@@ -265,8 +319,27 @@ STEP 4 — Append review to memory/WEEKLY-REVIEW.md:
 
 STEP 5 — Update memory/TRADING-STRATEGY.md if rule change needed.
 
-STEP 6 — Send ClickUp notification:
-bash scripts/clickup.sh "Weekly Review — Week Ending MMM DD, YYYY | Portfolio: $X (±X% week, ±X% phase) vs S&P: ±X% | Trades: N (W:X/L:Y) | Grade: [A-F]"
+STEP 6 — Send ClickUp notification (multi-section):
+bash scripts/clickup.sh "Weekly Review — Week Ending MMM DD, YYYY
+
+**Weekly Performance**
+Starting: $X | Ending: $X | Week P&L: ±$X (±X%) | Phase P&L: ±$X (±X%) | vs S&P: ±X%
+
+**Trading Summary**
+Trades: N (W:X / L:Y / Open:Z) | Win Rate: X% | Profit Factor: X | Avg R:R: X:1
+
+**Key Wins**
+- TICKER: +X% (catalyst: ...)
+- TICKER: +X% (catalyst: ...)
+
+**Key Losses**
+- TICKER: -X% (reason: thesis break / timing)
+- TICKER: -X% (reason: ...)
+
+**Key Lesson**
+[One critical insight for next week]
+
+**Grade: [A-F]** | Next Week Focus: [sector / setup type]"
 
 STEP 7 — COMMIT AND PUSH:
 git add memory/WEEKLY-REVIEW.md memory/TRADING-STRATEGY.md
