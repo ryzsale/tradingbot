@@ -57,7 +57,7 @@ STEP 5 — If a rule needs to change (proven out for 2+ weeks, or failed badly),
 also update memory/TRADING-STRATEGY.md and call out the change in the review.
 
 STEP 6 — Send ONE ClickUp message:
-  bash scripts/clickup.sh "📈 Weekly Review — Week Ending MMM DD, YYYY
+  bash scripts/clickup.sh "Weekly Review — Week Ending MMM DD, YYYY
 
 **Weekly Performance**
 Starting: \$X | Ending: \$X | Week P&L: ±\$X (±X%) | Phase P&L: ±\$X (±X%) | vs S&P: ±X%

@@ -57,9 +57,9 @@ STEP 4 — Write a dated entry to memory/RESEARCH-LOG.md:
 - Decision: trade or HOLD (default HOLD — patience > activity)
 
 STEP 5 — Notification: ALWAYS send, every run, professionally formatted.
-First line = plain-text title (no markdown), rest = structured markdown report:
+First line = plain-text title (no markdown, no emoji), rest = structured markdown report:
 
-  bash scripts/clickup.sh "📊 Pre-Market Report — MMM DD, YYYY
+  bash scripts/clickup.sh "Pre-Market Report — MMM DD, YYYY
 
 **Account Status**
 Equity: \$X | Cash: \$X (X%) | BP: \$X | DT: N/3

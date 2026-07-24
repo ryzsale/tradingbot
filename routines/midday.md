@@ -52,7 +52,7 @@ STEP 6 — Optional intraday research via Perplexity if something is moving
 sharply with no obvious cause. Append afternoon addendum to RESEARCH-LOG.
 
 STEP 7 — Notification: only if action was taken, professionally formatted.
-  bash scripts/clickup.sh "📈 Midday Scan — MMM DD, YYYY
+  bash scripts/clickup.sh "Midday Scan — MMM DD, YYYY
 
 **Position Updates**
 ✓ TICKER | Action: [Cut -7% | Trail tightened to X%] | P&L: ±\$X

@@ -52,8 +52,8 @@ STEP 5 — Append executed trades to memory/TRADE-LOG.md (exact format):
 Include only executed trades. Skip if no trades fired.
 
 STEP 6 — Notification: only if a trade was placed, professionally formatted.
-First line = title (no markdown), rest = structured markdown:
-  bash scripts/clickup.sh "🎯 Market-Open Execution — MMM DD, YYYY
+First line = title (no markdown, no emoji), rest = structured markdown:
+  bash scripts/clickup.sh "Market-Open Execution — MMM DD, YYYY
 
 **Trades Executed**
 ✓ TICKER | N shares @ \$X entry | Stop \$X | Target \$X (R:R X:1)
