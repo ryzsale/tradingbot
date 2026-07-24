@@ -46,22 +46,19 @@ STEP 4 — Append EOD snapshot to memory/TRADE-LOG.md (exact format):
 **Notes:** Plain-English summary of actions and market context.
 
 STEP 5 — Send ONE ClickUp message (always, even on no-trade days):
-  bash scripts/clickup.sh "EOD Report — MMM DD, YYYY
+  bash scripts/clickup.sh "📊 EOD Report — MMM DD, YYYY (Day N)
 
-  ## Portfolio Status
-  | Metric | Value |
-  |---|---|
-  | Equity | \$X |
-  | Cash | \$X (X%) |
-  | Day P&L | ±\$X (±X%) |
-  | Phase P&L | ±\$X (±X%) |
+**Portfolio Performance**
+Equity: \$X | Cash: \$X (X%) | Day P&L: ±\$X (±X%) | Phase P&L: ±\$X (±X%)
 
-  ## Positions & Trades
-  Open: [TICKER ±X% (stop \$X.XX) | ...] | Trades today: [list or none]
-  Trades this week: N/3
+**Active Positions**
+TICKER ±X% (entry \$X, stop \$X.XX) | ... | Trades today: [list or none]
 
-  ## Tomorrow
-  [One-line plan or focus area.]"
+**Weekly Tracking**
+Trades: N/3 this week | Open positions: N | Avg R:R: X:1
+
+**Tomorrow's Focus**
+[One-line market plan or sector focus]"
 
 STEP 6 — COMMIT AND PUSH (mandatory — tomorrow's Day P&L depends on this):
   git add memory/TRADE-LOG.md

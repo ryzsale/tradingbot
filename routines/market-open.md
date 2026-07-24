@@ -52,23 +52,21 @@ STEP 5 — Append executed trades to memory/TRADE-LOG.md (exact format):
 Include only executed trades. Skip if no trades fired.
 
 STEP 6 — Notification: only if a trade was placed, professionally formatted.
-First line = title (no markdown), rest = full markdown:
-  bash scripts/clickup.sh "Market-Open Execution — MMM DD, YYYY
+First line = title (no markdown), rest = structured markdown:
+  bash scripts/clickup.sh "🎯 Market-Open Execution — MMM DD, YYYY
 
-  ## Trades Executed
-  - **TICKER** | N shares @ \$X | Stop: \$X | Target: \$X (R:R X:1)
-  (or: No trades executed today.)
+**Trades Executed**
+✓ TICKER | N shares @ \$X entry | Stop \$X | Target \$X (R:R X:1)
+(or: ○ No trades — market conditions unfavorable)
 
-  ## Account After
-  | Metric | Value |
-  |---|---|
-  | Equity | \$X |
-  | Cash | \$X (X%) |
-  | Open Positions | N |
-  | Day-Trade Count | N/3 |
+**Portfolio Status**
+Equity: \$X | Cash: \$X (X%) | Positions: N | DT: N/3
 
-  ## Reason
-  Market conditions / catalyst analysis from RESEARCH-LOG."
+**Execution Details**
+Entry Time: HH:MM ET | Fill: Confirmed | Stop: GTC/PDT-blocked
+
+**Rationale**
+[Catalyst / setup from RESEARCH-LOG]"
 
 STEP 7 — COMMIT AND PUSH (mandatory if any trades executed):
   git add memory/TRADE-LOG.md

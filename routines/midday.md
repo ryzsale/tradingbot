@@ -52,18 +52,17 @@ STEP 6 — Optional intraday research via Perplexity if something is moving
 sharply with no obvious cause. Append afternoon addendum to RESEARCH-LOG.
 
 STEP 7 — Notification: only if action was taken, professionally formatted.
-  bash scripts/clickup.sh "Midday Scan — MMM DD, YYYY
+  bash scripts/clickup.sh "📈 Midday Scan — MMM DD, YYYY
 
-  ## Positions Updated
-  - **TICKER** | Action: [Cut at -7% | Stop tightened to X%] | P&L: ±\$X
-  (or: No position changes needed.)
+**Position Updates**
+✓ TICKER | Action: [Cut -7% | Trail tightened to X%] | P&L: ±\$X
+(or: ○ No changes — all theses holding, no losers)
 
-  ## Current Portfolio
-  | Ticker | Shares | Entry | Current | Unrealized | Stop |
-  |---|---|---|---|---|---|
+**Active Portfolio**
+TICKER | shares @ \$X | Current \$Y | Unrealized ±\$X | Stop \$Z
 
-  ## Summary
-  [Action summary or market conditions.]"
+**Market Conditions & Actions**
+[Intraday thesis check results / stop management / market catalysts]"
 
 STEP 8 — COMMIT AND PUSH (if any memory files changed):
   git add memory/TRADE-LOG.md memory/RESEARCH-LOG.md

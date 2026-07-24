@@ -57,34 +57,28 @@ STEP 4 — Write a dated entry to memory/RESEARCH-LOG.md:
 - Decision: trade or HOLD (default HOLD — patience > activity)
 
 STEP 5 — Notification: ALWAYS send, every run, professionally formatted.
-First line = plain-text title (no markdown symbols), rest = full markdown
-report. Follow this exact structure:
+First line = plain-text title (no markdown), rest = structured markdown report:
 
-  bash scripts/clickup.sh "Pre-Market Report — MMM DD, YYYY
+  bash scripts/clickup.sh "📊 Pre-Market Report — MMM DD, YYYY
 
-  ## Account Snapshot
-  | Metric | Value |
-  |---|---|
-  | Equity | \$X |
-  | Cash | \$X (X%) |
-  | Buying Power | \$X |
-  | Day-Trade Count | N/3 |
+**Account Status**
+Equity: \$X | Cash: \$X (X%) | BP: \$X | DT: N/3
 
-  ## Market Context
-  - **VIX:** X
-  - **S&P 500 Futures:** X
-  - **Sector Momentum:** X
-  - **Key Catalysts Today:** X
+**Market Conditions**
+VIX: X | S&P Futures: X | Sector Momentum: X
 
-  ## Trade Ideas
-  1. **TICKER** — catalyst: X, entry \$X, stop \$X, target \$X (R:R X:1)
-  (or: No qualifying trade ideas today — list why.)
+**Catalysts & Events**
+- Fed speakers, earnings, economic data (specific list)
 
-  ## Risk Factors
-  - X
+**Trade Setup**
+- TICKER (catalyst: ..., entry: \$X, stop: \$X, target: \$X, R:R X:1)
+- Alternative: No trade ideas identified yet
 
-  ## Decision
-  **TRADE / HOLD** — one-line rationale."
+**Risk Outlook**
+Market volatility / sector rotation / economic uncertainty
+
+**Decision: TRADE / HOLD**
+[One-line rationale for decision]"
 
 STEP 6 — COMMIT AND PUSH (mandatory):
   git add memory/RESEARCH-LOG.md

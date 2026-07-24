@@ -57,27 +57,26 @@ STEP 5 — If a rule needs to change (proven out for 2+ weeks, or failed badly),
 also update memory/TRADING-STRATEGY.md and call out the change in the review.
 
 STEP 6 — Send ONE ClickUp message:
-  bash scripts/clickup.sh "Weekly Review — Week Ending MMM DD, YYYY
+  bash scripts/clickup.sh "📈 Weekly Review — Week Ending MMM DD, YYYY
 
-  ## Performance
-  | Metric | Value |
-  |---|---|
-  | Starting Equity | \$X |
-  | Ending Equity | \$X |
-  | Week P&L | ±\$X (±X%) |
-  | Phase P&L | ±\$X (±X%) |
-  | S&P 500 | ±X% |
+**Weekly Performance**
+Starting: \$X | Ending: \$X | Week P&L: ±\$X (±X%) | Phase P&L: ±\$X (±X%) | vs S&P: ±X%
 
-  ## Trades This Week
-  | Ticker | Entry | Exit | P&L | Status |
-  |---|---|---|---|---|
-  Total: N trades (W:X / L:Y / Open:Z) | Win Rate: X% | Profit Factor: X
+**Trading Summary**
+Trades: N (W:X / L:Y / Open:Z) | Win Rate: X% | Profit Factor: X | Avg R:R: X:1
 
-  ## Analysis
-  **What Worked:** [3-5 bullets]
-  **What Didn't:** [3-5 bullets]
-  **Key Lesson:** [One key insight]
-  **Grade:** [A-F]"
+**Key Wins**
+- TICKER: +X% (catalyst: ...)
+- TICKER: +X% (catalyst: ...)
+
+**Key Losses**
+- TICKER: -X% (reason: thesis break / timing)
+- TICKER: -X% (reason: ...)
+
+**Key Lesson**
+[One critical insight for next week]
+
+**Grade: [A-F]** | Next Week Focus: [sector / setup type]"
 
 STEP 7 — COMMIT AND PUSH (mandatory):
   git add memory/WEEKLY-REVIEW.md memory/TRADING-STRATEGY.md
